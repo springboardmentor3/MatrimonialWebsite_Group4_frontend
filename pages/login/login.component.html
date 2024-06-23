@@ -1,0 +1,54 @@
+<!-- <body>
+    <video autoplay muted loop id="background-video"  width="1425" height="800">
+      <source src="../../../assets/login_background.mov"  type="video/mp4">
+    </video>
+
+    <div class="card">
+      <video autoplay muted loop style="justify-content:center;" height="200px" width="300px">
+        <source src="../../../assets/bandhan_header.mp4" type="video/mp4">
+       
+    </video>
+       
+    <form id="myForm" (ngSubmit)="onSubmit()" >
+      <label for="name">Username</label><br>
+      <input [(ngModel)]="email" type="text" id="name" name="name" required><br>
+      <label for="password">Password</label><br>
+      <input  [(ngModel)]="password" type="password" id="password" name="password" required><br><br>
+     
+
+      <input type="submit" value="Login">
+  </form>
+  
+
+        
+    </div>
+
+    
+  </body> -->
+
+  <div class="container">
+    <!-- Background video -->
+    <video autoplay muted loop id="background-video" width="1425" height="800">
+      <source src="../../../assets/login_background.mov" type="video/mp4">
+      <!-- Your browser does not support the video tag. -->
+    </video>
+  
+    <div class="card">
+      <!-- Header video (assuming this is a smaller video within the card) -->
+      <video autoplay muted loop style="justify-content: center;" height="200px" width="300px">
+        <source src="../../../assets/bandhan_header.mp4" type="video/mp4">
+        <!-- Your browser does not support the video tag. -->
+      </video>
+  
+      <!-- Login form -->
+      <form id="myForm" (ngSubmit)="onSubmit()">
+        <label for="name">Username</label><br>
+        <input [(ngModel)]="email" type="text" id="name" name="name" required><br>
+        <label for="password">Password</label><br>
+        <input [(ngModel)]="password" type="password" id="password" name="password" required><br><br>
+        <!-- <h1>Forgot password</h1> (Optional: Uncomment if needed) -->
+        <input type="submit" value="Login">
+      </form>
+    </div>
+  </div>
+  

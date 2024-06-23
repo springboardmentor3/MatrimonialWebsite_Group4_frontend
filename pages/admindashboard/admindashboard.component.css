@@ -1,0 +1,54 @@
+.card-container1 {
+    display: flex; /* Enable flexbox */
+    flex-wrap: wrap; /* Wrap cards to next line if needed */
+    margin:  0px auto; 
+    
+    /* Center the container horizontally */
+  /* Add some margin between cards */
+  }
+  .container{
+    display: flex; /* Enable flexbox */
+    flex-wrap: wrap; /* Wrap cards to next line if needed */
+    margin:  50px 300px;
+  }
+  .example-card {
+    background: linear-gradient(60deg, #154a79, #0e0241); 
+    min-width:200px;
+      max-width: 370px;
+    color : goldenrod;
+    margin : 30px;
+    border-width : 4px;
+    border-color:rgb(33, 126, 172);
+    border-radius: 10px;
+    font-size: 15px;
+    
+    }
+    mat-card-title{
+        font-size:25px;
+        color : goldenrod;
+    }
+
+    mat-card-subtitle{
+        font-size: 20px;
+        color : goldenrod;
+    }
+
+    h3{
+        margin-left: 30px;
+        color: #0e0241;
+        font-size: 25px;
+    }
+    table{
+        margin-left: 30px;
+        margin-top: 30px;
+        background-color: #0e0241;
+        color:goldenrod;
+
+
+    }
+    th{
+        color : goldenrod
+    }
+    td{
+        color : white;
+    }

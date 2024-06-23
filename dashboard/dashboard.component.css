@@ -1,0 +1,105 @@
+.card-container1 {
+  display: flex; /* Enable flexbox */
+  flex-wrap: wrap; /* Wrap cards to next line if needed */
+  margin: 0px auto; 
+}
+
+.container {
+  display: flex; /* Enable flexbox */
+  flex-wrap: wrap; /* Wrap cards to next line if needed */
+  margin:70px 0px; 
+}
+
+.example-card {
+  /* background: linear-gradient(60deg, #1c3489, #181234);  */
+  background-color: #ead197db;
+  
+
+  min-width: 270px;
+  max-width: 1200px;
+  color:  #181234;
+  margin:30px 0px;
+  border-width: 1px;
+  border-color: rgb(33, 37, 58);
+  border-radius: 2px;
+  font-size: 15px;
+}
+
+.meeting-detail {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.value {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 2px solid #ddd;
+}
+
+mat-card-subtitle {
+  color: goldenrod;
+}
+
+mat-divider {
+  margin: 10px 0;
+  color: brown;
+  font-size: medium;
+}
+
+/* img {
+  margin-left: 600px;
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px; 
+  height: auto;
+}
+
+p {
+  font-size: 60px; 
+  color: #0e0241;
+  display: inline-block;
+} */
+
+/* .typing-container-wrapper {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px; 
+} */
+/* 
+.typing-container {
+  
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid orange;
+  animation: typing 4s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+  height : 700px;
+  width: 400px;
+/* } */
+
+/* .typing-container-wrapper {
+  font-size: 24px;
+}
+
+.typing-container {
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  } */ 
+
+

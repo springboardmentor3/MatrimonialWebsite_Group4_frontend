@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<app-navbar></app-navbar>
+
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-md-11">
+        <div class="container">
+          <div class="left-section">
+            <h2>Contact Admin</h2>
+            <form class="query-form" (submit)="sendMessage($event)">
+              <label for="message">Your Message:</label>
+              <textarea id="message" name="message" placeholder="Type your message or query here..." [(ngModel)]="message"></textarea>
+              <input type="submit" value="Send Message">
+            </form>
+          </div>
+          <div class="right-section">
+            <div class="admin-info">
+              <img src="../../../assets/adminlogo.png" alt="Profile Photo" class="profile-photo">
+              <h1>Ghanshyam Karemore</h1>
+              <p><strong>Phone:</strong> 7058682539</p>
+              <p><strong>Email:</strong> <a href="mailto:ganeshamkaremore@gmail.com">bandhan123</a></p>
+              <p><strong>Office Address:</strong> Shamaprasad Society, Katraj, Pune, Mahatashtra</p>
+              <p><strong><i class="fab fa-linkedin icon"></i>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ghanshyam-karemore-62b477231/?original_referer=https%3A%2F%2Fin%2Elinkedin%2Ecom%2F&originalSubdomain=in">https://www.linkedin.com/in/bandhan-admin</a></p>
+              <p><strong><i class="fab fa-instagram icon"></i>Instagram:</strong> <a href="https://www.instagram.com/">https://www.instagram.com/bandhan-admin</a></p>   
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

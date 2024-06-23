@@ -1,0 +1,36 @@
+<div class="content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1">
+          <app-adminbar></app-adminbar>
+        </div>
+        <div class="col-md-11">
+          
+            <div class="card">
+                <!-- Header video (assuming this is a smaller video within the card) -->
+                <video autoplay muted loop style="justify-content: center;" height="200px" width="300px">
+                  <source src="../../../assets/bandhan_header.mp4" type="video/mp4">
+                  <!-- Your browser does not support the video tag. -->
+                </video>
+            
+                <!-- Login form -->
+                <form id="myForm" (ngSubmit)="formSubmit()">
+                  <label for="name">Name</label><br>
+                  <input [(ngModel)]="candidate.name" type="text" id="name" name="name" required><br>
+                  <label for="address">Address</label><br>
+                  <input [(ngModel)]="candidate.address" type="text" id="address" name="address" required><br>
+
+                  <label for="phone">Phone</label><br>
+                  <input [(ngModel)]="candidate.phone" type="text" id="phone" name="phone" required><br>
+                  <label for="email">Email</label><br>
+                  <input [(ngModel)]="candidate.email" type="text" id="email" name="email" required><br><br>
+                  <!-- <h1>Forgot password</h1> (Optional: Uncomment if needed) -->
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+  

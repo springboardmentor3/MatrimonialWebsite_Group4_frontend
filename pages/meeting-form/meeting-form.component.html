@@ -1,0 +1,160 @@
+
+
+<!-- <app-navbar></app-navbar>
+
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">
+        <app-sidebar></app-sidebar>
+      </div>
+
+
+      <div class="col-md-11">
+        <div class="card1">
+
+        <div class="card">
+         
+          <video autoplay muted loop style="justify-content: center;" height="200px" width="300px">
+            <source src="../../../assets/bandhan_header.mp4" type="video/mp4">
+            
+          </video>
+      
+      
+          <form  [formGroup]="meetingForm" (ngSubmit)="onSubmit()" >
+            <div>
+                <label for="rid">RID:</label>
+                <input id="rid" formControlName="recrid" readonly>
+              </div>
+            
+              <div>
+                <label for="sendRid">Send RID:</label>
+                <input id="sendRid" formControlName="send_rid" type="number">
+              </div>
+            
+              <div>
+                <label for="meetingDestination">Meeting Destination:</label>
+                <input id="meetingDestination" formControlName="place" type="text">
+              </div>
+            
+              <div>
+                <label for="meetingDate">Meeting Date:</label>
+                <input id="meetingDate" formControlName="date" type="date">
+              </div>
+            
+              <div>
+                <label for="time">Meeting Time</label>
+                <input id="time" formControlName="time" type="time" />
+              
+              </div>
+            
+              <div>
+                <label for="message">Message:</label>
+                <textarea id="message" formControlName="message"></textarea>
+              </div>
+
+            
+              <button type="submit">Submit</button>
+          </form>
+        </div>
+
+      </div> -->
+        <!-- <div class="container">
+          <form [formGroup]="meetingForm" (ngSubmit)="onSubmit()" >
+              <div>
+                  <label for="rid">RID:</label>
+                  <input id="rid" formControlName="recrid" readonly>
+                </div>
+              
+                <div>
+                  <label for="sendRid">Send RID:</label>
+                  <input id="sendRid" formControlName="send_rid" type="number">
+                </div>
+              
+                <div>
+                  <label for="meetingDestination">Meeting Destination:</label>
+                  <input id="meetingDestination" formControlName="place" type="text">
+                </div>
+              
+                <div>
+                  <label for="meetingDate">Meeting Date:</label>
+                  <input id="meetingDate" formControlName="date" type="date">
+                </div>
+              
+                <div>
+                  <label for="time">Meeting Time</label>
+                  <input id="time" formControlName="time" type="time" />
+                
+                </div>
+              
+                <div>
+                  <label for="message">Message:</label>
+                  <textarea id="message" formControlName="message"></textarea>
+                </div>
+              
+                <button type="submit">Submit</button>
+            </form>
+          </div> -->
+            
+          
+             
+          
+<!--             
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<app-navbar></app-navbar>
+
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">
+        <app-sidebar></app-sidebar>
+      </div>
+
+      <div class="col-md-11">
+        <div class="card1">
+          <div class="card">
+            <!-- Header video -->
+            <video autoplay muted loop class="header-video">
+              <source src="../../../assets/bandhan_header.mp4" type="video/mp4">
+            </video>
+      
+            <!-- Login form -->
+            <form id="myForm" [formGroup]="meetingForm" (ngSubmit)="onSubmit()">
+              <div>
+                <label for="rid">RID:</label>
+                <input id="rid" formControlName="recrid"  type="number" readonly>
+              </div>
+              <div>
+                <label for="sendRid">Send RID:</label>
+                <input id="sendrid" formControlName="sendrid"   type="number"   readonly>
+              </div>
+              <div>
+                <label for="meetingDestination">Meeting Destination:</label>
+                <input id="meetingDestination" formControlName="place" type="text">
+              </div>
+              <div>
+                <label for="meetingDate">Meeting Date:</label>
+                <input id="meetingDate" formControlName="date" type="date">
+              </div>
+              <div>
+                <label for="time">Meeting Time</label>
+                <input id="time" formControlName="time" type="time">
+              </div>
+              <div>
+                <label for="message">Message:</label>
+                <textarea id="message" formControlName="message"></textarea>
+              </div>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

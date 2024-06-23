@@ -1,0 +1,73 @@
+<div class="bootstrap-wrapper">
+  <div class="row align-items-start">
+    <div class="col-md-6 p-0">
+      <img class="img-fluid" src="https://static.toiimg.com/thumb/msid-100574635,width-960,height-1280,resizemode-6.cms" alt="">
+    </div>
+    <div class="col-md-6 p-0">
+      <div class="card">
+        <video autoplay muted loop style="justify-content:center;" height="200px" width="300px">
+          <source src="../../../assets/bandhan_header.mp4" type="video/mp4">
+        </video>
+        <form [formGroup]="myForm" (ngSubmit)="formSubmit()">
+          <label for="name">Enter your name:</label><br>
+          <input formControlName="name" type="text" required><br>
+          <div *ngIf="myForm.get('name')?.invalid && (myForm.get('name')?.dirty || myForm.get('name')?.touched)">
+            <small style="color: red;" *ngIf="myForm.get('name')?.errors?.['required']">Name is required.</small>
+          </div>
+          
+          <label for="address">Enter your address:</label><br>
+          <input formControlName="address" type="text" required [disabled]="!!myForm.get('name')?.invalid"><br>
+          <div *ngIf="myForm.get('address')?.invalid && (myForm.get('address')?.dirty || myForm.get('address')?.touched)">
+            <small style="color: red;" *ngIf="myForm.get('address')?.errors?.['required']">Address is required.</small>
+          </div>
+          
+          <label for="phone">Enter your phone:</label><br>
+          <input formControlName="phone" type="tel" pattern="[0-9]{10}" required [disabled]="!!myForm.get('address')?.invalid"><br>
+          <div *ngIf="myForm.get('phone')?.invalid && (myForm.get('phone')?.dirty || myForm.get('phone')?.touched)">
+            <small style="color: red;" *ngIf="myForm.get('phone')?.errors?.['required']">Phone number is required.</small>
+            <small style="color: red;" *ngIf="myForm.get('phone')?.errors?.['pattern']">Phone number must be 10 digits.</small>
+          </div>
+          
+          <label for="email">Enter your email:</label><br>
+          <input formControlName="email" type="email" required [disabled]="!!myForm.get('phone')?.invalid"><br>
+          <div *ngIf="myForm.get('email')?.invalid && (myForm.get('email')?.dirty || myForm.get('email')?.touched)">
+            <small style="color: red;" *ngIf="myForm.get('email')?.errors?.['required']">Email is required.</small>
+            <small style="color: red;" *ngIf="myForm.get('email')?.errors?.['email']">Email must be a valid email address.</small>
+          </div>
+          
+          <label for="password">Enter your password:</label><br>
+          <input formControlName="password" type="password" minlength="8" required [disabled]="!!myForm.get('email')?.invalid"><br>
+          <div *ngIf="myForm.get('password')?.invalid && (myForm.get('password')?.dirty || myForm.get('password')?.touched)">
+            <small style="color: red;" *ngIf="myForm.get('password')?.errors?.['required']">Password is required.</small>
+            <small style="color: red;" *ngIf="myForm.get('password')?.errors?.['minlength']">Password must be at least 8 characters long.</small>
+          </div>
+          
+          <label for="guests">Enter no of guests:</label><br>
+          <input formControlName="guests" type="number" min="1" max="100" required [disabled]="!!myForm.get('password')?.invalid"><br>
+          <div *ngIf="myForm.get('guests')?.invalid && (myForm.get('guests')?.dirty || myForm.get('guests')?.touched)">
+            <small style="color: red;" *ngIf="myForm.get('guests')?.errors?.['required']">Number of guests is required.</small>
+            <small style="color: red;" *ngIf="myForm.get('guests')?.errors?.['min']">Guests must be at least 1.</small>
+            <small style="color: red;" *ngIf="myForm.get('guests')?.errors?.['max']">Guests cannot exceed 100.</small>
+          </div>
+          
+          <label for="date">Enter date of Function:</label><br>
+          <input formControlName="date" type="date" required [disabled]="!!myForm.get('guests')?.invalid"><br>
+          <div *ngIf="myForm.get('date')?.invalid && (myForm.get('date')?.dirty || myForm.get('date')?.touched)">
+            <small style="color: red;" *ngIf="myForm.get('date')?.errors?.['required']">Date is required.</small>
+          </div>
+          
+          <button type="button" (click)="sendVerificationEmail()" [disabled]="myForm.get('date')?.invalid">Send Verification Email</button><br>
+          
+          <label for="code">Enter Verification Code:</label><br>
+          <input formControlName="code" required (ngModelChange)="verifyCode()" [disabled]="!!myForm.get('date')?.invalid"><br>
+          <div *ngIf="myForm.get('code')?.invalid && (myForm.get('code')?.dirty || myForm.get('code')?.touched)">
+            <small style="color: red;" *ngIf="myForm.get('code')?.errors?.['required']">Verification code is required.</small>
+          </div>
+          <input type="submit" value="Submit" [disabled]="!isVerified">
+          <br>
+          <a href="/login">Sign In</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

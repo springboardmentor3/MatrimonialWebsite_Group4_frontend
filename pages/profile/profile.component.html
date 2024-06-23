@@ -1,0 +1,208 @@
+<!-- <app-navbar></app-navbar>
+
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-md-11">
+        <h1>Profiles</h1>
+
+        <div *ngIf="profiles.length > 0">
+            <div *ngFor="let profile of profiles">
+              
+              <h3>Profile {{ profile.id }}</h3>
+              <p><strong>Name:</strong> {{ profile.age}}</p>
+              <p><strong>Email:</strong> {{ profile.weight }}</p>
+              <p><strong>Phone:</strong> {{ profile.height }}</p>
+             
+            </div>
+          </div>
+          <div *ngIf="profiles.length === 0">
+            <p>No profiles found.</p>
+          </div>
+
+          <div class="card-container1">
+            <div class="container">
+              <mat-card class="example-card" *ngFor="let item of combinedProfiles; let index = index">
+                <mat-card-header>
+                  <mat-card-title>{{item.profile.name || item.nameProfile.name}}</mat-card-title>
+                  <mat-card-subtitle>{{item.profile.address || item.nameProfile.address}}</mat-card-subtitle>
+                </mat-card-header>
+                <br>
+                <mat-card-content>
+                    <div *ngFor="let profile of profiles">
+              
+                        <h3>Profile {{ profile.id }}</h3>
+                        <p><strong>Name:</strong> {{ profile.age}}</p>
+                        <p><strong>Email:</strong> {{ profile.weight }}</p>
+                        <p><strong>Phone:</strong> {{ profile.height }}</p>
+                       
+                      </div>
+                  
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button>
+                </mat-card-actions>
+                <mat-card-footer>
+                  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                </mat-card-footer>
+              </mat-card>
+            </div>
+          </div>
+          
+          
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+      
+             <!-- <app-navbar></app-navbar>
+
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-md-11">
+        <h1>Profiles</h1>
+
+        <div *ngIf="profiles.length > 0">
+            <div *ngFor="let profile of profiles">
+              
+              <h3>Profile {{ profile.id }}</h3>
+              <p><strong>Name:</strong> {{ profile.age}}</p>
+              <p><strong>Email:</strong> {{ profile.weight }}</p>
+              <p><strong>Phone:</strong> {{ profile.height }}</p>
+             
+            </div>
+          </div>
+          <div *ngIf="profiles.length === 0">
+            <p>No profiles found.</p>
+          </div>
+
+          <div class="card-container1">
+            <div class="container">
+              <mat-card class="example-card" *ngFor="let item of combinedProfiles; let index = index">
+                <mat-card-header>
+                  <mat-card-title>{{item.profile.name || item.nameProfile.name}}</mat-card-title>
+                  <mat-card-subtitle>{{item.profile.address || item.nameProfile.address}}</mat-card-subtitle>
+                </mat-card-header>
+                <br>
+                <mat-card-content>
+                    <div *ngFor="let profile of profiles">
+              
+                        <h3>Profile {{ profile.id }}</h3>
+                        <p><strong>Name:</strong> {{ profile.age}}</p>
+                        <p><strong>Email:</strong> {{ profile.weight }}</p>
+                        <p><strong>Phone:</strong> {{ profile.height }}</p>
+                       
+                      </div>
+                  
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button>
+                </mat-card-actions>
+                <mat-card-footer>
+                  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                </mat-card-footer>
+              </mat-card>
+            </div>
+          </div>
+          
+          
+      </div>
+    </div>
+  </div>
+</div> -->
+
+      
+
+    <!-- <h3>Profile {{ profile.id }}</h3>
+    <p><strong>Age :</strong> {{ profile.age }}</p>
+    <p><strong>Weight :</strong> {{ profile.weight }}</p>
+    <p><strong>Height :</strong> {{ profile.height }}</p>
+    <h3>Education</h3>
+
+    <p><strong>Education_level:</strong> {{ education.education_level }}</p>
+
+    <p><strong>Education_filed:</strong> {{ education.education_filed }}</p>
+    <h3>Family</h3>
+  
+
+    <p><strong>Famitly Status: </strong> {{ family.family_status}}</p>
+    <p><strong>Family Types: </strong> {{ family.family_Types}}</p>
+    <p><strong>Family Name: </strong> {{ family.family_name}}</p>
+    
+
+
+ -->
+
+ <div class="centered-card">
+    <mat-card class="profile-card">
+      <mat-card-header>
+        <mat-card-title>Profile Information</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="profile-table">
+          <table>
+            <tr>
+                <th>Profile</th>
+                <td>{{ profile.id }}</td>
+              </tr>
+              <tr>
+                <th>Age</th>
+                <td>{{ profile.age }}</td>
+              </tr>
+              <tr>
+                <th>Weight</th>
+                <td>{{ profile.weight }}</td>
+              </tr>
+              <tr>
+                <th>Height</th>
+                <td>{{ profile.height }}</td>
+              </tr>
+              <tr>
+                <th colspan="2">Education</th>
+              </tr>
+              <tr>
+                <th>Education Level</th>
+                <td>{{ education.education_level }}</td>
+              </tr>
+              <tr>
+                <th>Education Field</th>
+                <td>{{ education.education_filed }}</td>
+              </tr>
+              <tr>
+                <th colspan="2">Family</th>
+              </tr>
+              <tr>
+                <th>Family Status</th>
+                <td>{{ family.family_status }}</td>
+              </tr>
+              <tr>
+                <th>Family Types</th>
+                <td>{{ family.family_Types }}</td>
+              </tr>
+              <tr>
+                <th>Family Name</th>
+                <td>{{ family.family_name }}</td>
+              </tr>
+          </table>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

@@ -1,0 +1,39 @@
+/* Apply linear gradient background to the body */
+
+
+/* Style the navbar */
+app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Adjust navbar height */
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+}
+
+/* Style the content wrapper */
+.content-wrapper {
+  padding-top: 100px; /* Space for navbar */
+  padding-left: 100px; /* Space for sidebar */
+}
+
+/* Style the sidebar */
+app-sidebar {
+  position: fixed;
+  top: 60px; /* Position below the navbar */
+  left: 0;
+  /* width: 250px; Fixed width for sidebar */
+  height: calc(100vh - 60px); /* Adjust sidebar height relative to viewport height minus navbar height */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  z-index: 1000; /* Ensure sidebar appears above background */
+  overflow-y: auto; /* Enable vertical scroll if sidebar content exceeds height */
+}
+
+
+
+ app-photos {
+  margin-top : 300px;
+  margin-left:300px;
+
+}  

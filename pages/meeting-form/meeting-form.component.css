@@ -1,0 +1,113 @@
+/* .mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  
+  .mat-mdc-form-field {
+    margin-top: 16px;
+  } */
+  app-navbar{
+    position: fixed;
+  }
+
+  
+  .header-video {
+    justify-content: center;
+
+    height: 200px;
+    width: 300px;
+    margin-left:50px;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 100%; /* Adjust the width as per your design */
+    display: flex; /* Enable flexbox */
+    flex-wrap: wrap; /* Wrap cards to next line if needed */
+    /* width: 50%;
+    height:  75%;  */
+    margin:  150px 100px; 
+    
+    width: 500px;
+
+
+   
+    background:  #171240; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    color: rgb(8, 13, 43); /* Text color */
+    font-size: 18px;
+    /* font-weight: bold; */
+    text-align: center; /* Center text */
+    padding: 30px; /* Padding inside the card */
+  }
+  
+
+
+    /* margin-top: 100px;
+    margin-left : 100px;*/
+
+ 
+
+  #myForm {
+  
+    margin-left:50px;
+}
+
+/* Style for labels */
+label {
+    color: goldenrod;
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid goldenrod; /* Outline in golden */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: transparent; /* No background */
+    color: goldenrod; /* Text color in golden */
+}
+textarea{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid goldenrod; /* Outline in golden */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: transparent; /* No background */
+    color: goldenrod; /* Text color in golden */
+
+}
+
+/* Style for date field */
+
+/* Style for submit button */
+input[type="submit"] {
+    background-color: goldenrod;
+    color: rgb(11, 26, 55);
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: darkgoldenrod;
+}
+  
+  
