@@ -1,0 +1,355 @@
+
+
+ <app-navbar></app-navbar>
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-md-11">
+        <mat-card class="background-video">
+          <mat-card-content class="content">
+
+            <video autoplay muted loop id="background-video">
+              <source src="../../../assets/profile_video1.mp4" type="video/mp4">
+            </video>
+
+          </mat-card-content>
+        </mat-card>
+
+        <div class="circular-card">
+          <!-- <img src="https://media.istockphoto.com/id/1290304564/photo/portrait-of-very-beautiful-young-indian-bride-in-luxurious-bridal-costume-with-makeup-and.jpg?s=612x612&w=0&k=20&c=P0FoifDVWIjqxIrSLoWHPwaAojeB23_7KLVbt35Aeak=" alt="Photo"> -->
+          <img [src]="retrievedImage">
+        </div>
+        <br><br><br>
+
+
+        <div class="bootstrap-wrapper">
+          <div class="row align-items-start">
+            <div class="col-md-4">
+              <mat-card class="description_card">
+                <br><br>
+               {{names}}
+                <br><br>
+                <mat-card-content>
+               {{aboutYourself}}
+                </mat-card-content>
+              </mat-card>
+            </div>
+            <div class="col-md-7">
+              <div>
+                <mat-tab-group animationDuration="2000ms">
+                  <mat-tab>
+                    <ng-template mat-tab-label class="custom-label">
+                      <i class="material-icons">
+                        person
+                        </i>
+                      Profile Image
+                    </ng-template>
+                    <!-- <ng-template mat-tab-label class="custom-label">
+                      <i class="material-icons">
+                        account_circle
+                        
+                      </i>
+                      Profie/avatar
+                    </ng-template>
+                    <div class="card-container">
+<br>
+                    <mat-card class="first_card">
+                      <mat-card-content><br><br>
+
+                        <br>
+                        <form  (ngSubmit)="formSubmit()"id="myForm" >
+                          <div class="input-container">
+                            <mat-icon>account_circle</mat-icon>
+                             <label for="name">Enter your name:</label><br> 
+                            <input  [(ngModel)]="image.rid" type="text" id="rid" name="rid" placeholder="Enter your rid"><br>
+                          </div>
+                          <div class="input-container">
+                            <mat-icon>account_circle</mat-icon>
+                           
+                            <input  [(ngModel)]="image.name" type="text" id="name" name="name" placeholder="Enter your name"><br>
+                          </div>
+                          <div class="input-container">
+                            <mat-icon>description</mat-icon>
+                             <textarea  [(ngModel)]="image.description" id="description" name="description" placeholder="Enter your description" rows="4" required></textarea>
+                          </div>
+                          
+                           <div class="input-container">
+                            <i class="material-icons">
+                             photo_camera
+                              
+                            </i>
+
+                       
+                                       <label for="imageFile">Photo</label>
+                                       <input  type="file" multiple value="select" #selectFile (change)="onFileSelected($event)">
+                                  </div> 
+
+<br><br>
+                          <input type="submit" value="Submit">
+                        
+                      </form>
+                      </mat-card-content>
+                    </mat-card>
+
+                    <mat-card class="overlap_card">
+                      <mat-card-content>Welcome Back, You can update your profile</mat-card-content>
+                    </mat-card>
+                  </div> -->
+                  <br>
+                  
+                  <mat-card class="first_card">
+                    <mat-card-content><br><br>
+
+                      <br>
+
+                      <form id="myForm" >
+                        <div class="input-container">
+                          <mat-icon>account_circle</mat-icon>
+                          
+                          <input type="number" class="form-control" id="Id" placeholder="Image id" [(ngModel)]="imageId"
+                          name="Id"  value="{{ userID}}" />
+                          <br>
+                        </div>
+
+                        <div class="input-container">
+                          <mat-icon>account_circle</mat-icon>
+                          
+                          <input type="file" (change)="onFileChanged($event)">
+                        </div>
+
+                        <br>
+                        <input type="submit" (click)="onUpload()" value="Upload">
+
+                        <input type="submit" (click)="getImage()" value="Get Image">
+                       
+                     
+                   
+                
+                 
+                      
+
+<br><br>
+                       
+                      
+                    </form>
+
+                  <!-- <div class="container row">
+                    <div class="col-md-12"> -->
+                     
+                    <!-- </div>
+                  </div>
+                   -->
+                
+                
+                      <!-- <div *ngIf=message>{{message}}</div> -->
+                  
+                  <!-- <div class="container row">
+                    <div class="col-md-6">
+                      <input type="number" class="form-control" id="Id" placeholder="Image id" [(ngModel)]="imageid"
+                             name="Id" />
+                    </div>
+                    <div class="col-md-6"> -->
+                      <!-- <input type="submit" (click)="getImage()" value="Submit"> -->
+                  
+                    <!-- </div>
+                  </div>
+                  
+                  <div class="container row">
+                    <div class="col-md-12">
+                      <div *ngIf=retrievedImage>
+                        <img [src]="retrievedImage">
+                      </div>
+                    </div>
+                  </div> -->
+                </mat-card-content>
+              </mat-card>
+              
+              <mat-card class="overlap_card">
+                <mat-card-content>Welcome Back, You can update your profile</mat-card-content>
+              </mat-card>
+
+                  </mat-tab>
+                  <mat-tab>
+                    <ng-template mat-tab-label class="custom-label">
+                      <i class="material-icons">
+                        person
+                        </i>
+                      Personal Info
+                    </ng-template>
+                    <br><br>
+
+                    <mat-card class="first_card">
+                      <mat-card-content><br><br>
+
+                        <br>
+                        <form  (ngSubmit)="formSubmit1()"id="myForm" >
+                          <div class="input-container">
+                            <mat-icon>account_circle</mat-icon>
+                            
+                            <input  [(ngModel)]="personal.rId" type="number" id="rid" name="rid" value="{{ personal.rId }}" ><br>
+                          </div>
+                          <div class="input-container">
+                            <mat-icon>account_circle</mat-icon>
+                       
+                          <input  [(ngModel)]="personal.age" type="number" id="age" name="age" placeholder="Enter your age"><br>
+                        </div>
+                        <div class="input-container">
+                          <mat-icon>account_circle</mat-icon>
+                        
+                        <input  [(ngModel)]="personal.weight" type="number" id="weight" name="weight" placeholder="Enter your weight"><br>
+                      </div>
+                      <div class="input-container">
+                        <mat-icon>account_circle</mat-icon>
+                      
+                      <input  [(ngModel)]="personal.height" type="number" id="height" name="height" placeholder="Enter your height"><br>
+                      <div class="input-container">
+                        <mat-icon>account_circle</mat-icon>
+                        <textarea [(ngModel)]="aboutYourself" id="aboutYourself" name="aboutYourself" placeholder="Tell about yourself" rows="4" required></textarea>
+                      </div>
+                      <br>
+                    </div>
+
+                  
+                  <div class="input-container">
+                    <mat-icon>account_circle</mat-icon>
+                 
+                  <input  [(ngModel)]="personal.bloodType" type="text" id="bloodType" name="bloodType" placeholder="Enter your bloodType"><br>
+                </div>
+                          
+                        
+
+<br>
+                          <input type="submit" value="Submit">
+                        
+                      </form>
+                      </mat-card-content>
+                    </mat-card>
+
+                    <mat-card class="overlap_card">
+                      <mat-card-content>Welcome Back, You can update your profile</mat-card-content>
+                    </mat-card>
+
+                  </mat-tab>
+                  <mat-tab>
+                    <ng-template mat-tab-label class="custom-label">
+
+
+                      <i class="material-icons">diversity_3</i>
+                      Family
+                      
+                    </ng-template>
+                    <br><br>
+
+                    <mat-card class="first_card">
+                      <mat-card-content><br><br>
+
+                        <br>
+                        <form  (ngSubmit)="formSubmit2()"id="myForm" >
+                          <div class="input-container">
+                            <mat-icon>account_circle</mat-icon>
+                            
+                            <input  [(ngModel)]="family.rId" type="number" id="rId" name="rId" value="{{ family.rId }}" ><br>
+                          </div>
+                          <div class="input-container">
+                            <mat-icon>account_circle</mat-icon>
+                          
+                          <input  [(ngModel)]="family.family_status" type="text" id="family_status" name="family_status" placeholder="Enter your family_status"><br>
+                        </div>
+                        <div class="input-container">
+                          <mat-icon>account_circle</mat-icon>
+                       
+                        <input  [(ngModel)]="family.family_name" type="text" id="family_name" name="family_name" placeholder="Enter your family_name"><br>
+                      </div>
+                      <div class="input-container">
+                        <mat-icon>account_circle</mat-icon>
+                    
+                      <input  [(ngModel)]="family.family_Types" type="text" id="family_Types" name="family_Types" placeholder="Enter your family_Types"><br>
+                    </div>
+
+                  
+                 
+                          
+                        
+
+<br><br>
+                          <input type="submit" value="Submit">
+                        
+                      </form>
+                      </mat-card-content>
+                    </mat-card>
+
+                    <mat-card class="overlap_card">
+                      <mat-card-content>Welcome Back, You can update your profile</mat-card-content>
+                    </mat-card>
+
+
+                  </mat-tab>
+
+                  <mat-tab>
+                    <ng-template mat-tab-label class="custom-label">
+                      <i class="material-icons">school</i>
+                     
+                      Education
+                    </ng-template>
+
+                    <br><br>
+
+                    <mat-card class="first_card">
+                      <mat-card-content><br><br>
+
+                        <br>
+                        <form  (ngSubmit)="formSubmit3()"id="myForm" >
+                          <div class="input-container">
+                            <mat-icon>account_circle</mat-icon>
+                            
+                            <input  [(ngModel)]="education.rId" type="number" id="rId" name="rId" value="{{ education.rId }}" ><br>
+                          </div>
+                          <div class="input-container">
+                            <mat-icon>account_circle</mat-icon>
+                          
+                          <input  [(ngModel)]="education.education_level" type="text" id="education_level" name="education_level" placeholder="Enter your education_level"><br>
+                        </div>
+                        <div class="input-container">
+                          <mat-icon>account_circle</mat-icon>
+                       
+                        <input  [(ngModel)]="education.education_filed" type="text" id="education_filed" name="education_filed" placeholder="Enter your education_filed"><br>
+                      </div>
+                      
+
+                  
+                 
+                          
+                        
+
+<br><br>
+                          <input type="submit" value="Submit">
+                        
+                      </form>
+                      </mat-card-content>
+                    </mat-card>
+
+                    <mat-card class="overlap_card">
+                      <mat-card-content>Welcome Back, You can update your profile</mat-card-content>
+                    </mat-card>
+
+                  </mat-tab>
+                </mat-tab-group>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ 
+
+ 
