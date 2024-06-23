@@ -1,0 +1,56 @@
+/* .example-spacer {
+    flex: 1 1 auto;
+  }
+
+
+.custom-toolbar {
+    background-color: #171240; 
+    color: #daa520; 
+    width: 100%;
+    height : 13%;
+    position:fixed;
+}
+
+
+   */
+
+   .example-spacer {
+    flex: 1 1 auto;
+}
+
+.custom-toolbar {
+    background-color: #171240;
+    color: #daa520;
+    width: 100%;
+    height: 13%;
+    position: fixed;
+}
+
+.notification-icon {
+    position: relative;
+    color: #daa520;
+}
+
+/* .notification-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+} */
+
+.notification-dot {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .button{
+    margin-right: 200px;
+  }

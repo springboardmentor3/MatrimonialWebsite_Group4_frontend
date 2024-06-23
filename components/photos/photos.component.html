@@ -1,0 +1,49 @@
+<!-- bride-photos.component.html -->
+<div class="card-container">
+<mat-card class="example-card"  [attr.data-rid]="index + 1" (click)="onCardClick(index + 1)" *ngFor="let item of profileImages;let index = index">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ item.profile.name }}</mat-card-title>
+      <mat-card-subtitle>{{item.profile.address}}</mat-card-subtitle>
+    </mat-card-header>
+
+ <img mat-card-image [src]="item.image" (click)=" onProfileClick(index+1)"> 
+   <!-- <img mat-card-image [src]="item.image"> -->
+    <mat-card-content>
+      <br>
+    
+        <mat-card-subtitle>I am anita, a blend of traditional values and modern outlook, seeking a life partner who shares mutual respect, understanding, and companionship on this beautiful journey of life.</mat-card-subtitle>
+        
+      
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Add to favorites" (click)="addToFavorites(item.profile)">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <a routerLink="/login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>share</mat-icon>
+      </a>
+
+      <!-- <input mat-button (click)="onMeetingClick(index + 1)">Meeting</button> -->
+      
+      <input type="submit" (click)="onMeetingClick(index + 1)" value="Meeting">
+     
+
+      <input type="submit" (click)="sendNotification(item.profile.email, 'Hello, '+ this.names + ' from ' + this.addresses + ' is interested in profile amd want to notify you ' + ' Email : ' + this.emails + ' Phone : ' + this.phones)" value="Notify">
+      
+      
+    
+    </mat-card-actions>
+  </mat-card>
+
+
+
+
+  
+
+    
+    </div>
+    
+    
+  
+  

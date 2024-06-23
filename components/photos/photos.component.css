@@ -1,0 +1,43 @@
+
+
+.card-container {
+  display: flex; /* Enable flexbox */
+  flex-wrap: wrap; /* Wrap cards to next line if needed */
+  margin: 0px auto; 
+  /* Center the container horizontally */
+/* Add some margin between cards */
+}
+.example-card {
+  background-color: #171240;
+    max-width: 370px;
+  color : goldenrod;
+  margin : 25px;
+  
+  }
+  
+  mat-card-subtitle{
+    color:goldenrod;
+  }
+  input[type="submit"] {
+    margin : 5px;
+    background-color: goldenrod;
+    color: rgb(11, 26, 55);
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+
+    background-color: darkgoldenrod;
+}
+  
+
+  
+
+  .example-header-image {
+    background-image: url('https://media.istockphoto.com/id/1290304564/photo/portrait-of-very-beautiful-young-indian-bride-in-luxurious-bridal-costume-with-makeup-and.jpg?s=612x612&w=0&k=20&c=P0FoifDVWIjqxIrSLoWHPwaAojeB23_7KLVbt35Aeak=');
+    background-size: cover;
+  }

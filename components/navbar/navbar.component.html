@@ -1,0 +1,62 @@
+<!-- <!-- <mat-toolbar class="custom-toolbar" >
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu_book</mat-icon>
+    
+    
+    </button>
+    <a routerLink=""> <img  class="img-fluid" src="../../../assets/bandhan_small.jpg"alt=""></a>
+     
+    <span class="example-spacer"></span>
+    <a routerLink="/contact">Contact</a>
+    Logout
+    <a routerLink="/login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>logout</mat-icon>
+    </a>
+    <button mat-icon-button class="example-icon mr20 ml20" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+   -->
+
+   <!-- <mat-toolbar class="custom-toolbar">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu_book</mat-icon>
+    </button>
+    <a routerLink=""><img class="img-fluid" src="../../../assets/bandhan_small.jpg" alt=""></a>
+    <span class="example-spacer"></span>
+    <a routerLink="/contact">Contact</a>
+    Logout
+    <a routerLink="/login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>logout</mat-icon>
+    </a>
+    <button mat-icon-button class="example-icon mr20 ml20" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon notification-icon" aria-label="Example icon-button with bell icon">
+        <mat-icon>notifications</mat-icon>
+  
+        <span class="notification-dot" ></span>
+    </button>
+</mat-toolbar> -->
+
+
+<mat-toolbar class="custom-toolbar">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu_book</mat-icon>
+    </button>
+    <a routerLink=""><img class="img-fluid" src="../../../assets/bandhan_small.jpg" alt=""></a>
+    <span class="example-spacer"></span>
+    <!-- <button routerLink="/contact" mat-icon-button class="contact" aria-label="Example icon-button with heart icon">Contact</button> -->
+    Logout
+    <button routerLink="/login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>logout</mat-icon>
+    </button>
+    <!-- <button mat-icon-button class="example-icon mr20 ml20" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button> -->
+    <button routerLink="/getreply" mat-icon-button class="example-icon notification-icon" aria-label="Example icon-button with bell icon">
+      <mat-icon>notifications</mat-icon>
+      <span class="notification-dot" *ngIf="newReplyNotification"></span>
+    </button>
+  </mat-toolbar>
+  

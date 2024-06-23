@@ -1,0 +1,34 @@
+mat-card {
+    height: 250px; /* Set the desired height of the card */
+    width: 1300px;   /* Adjust card width based on your layout */
+    position: relative;
+    overflow: hidden; /* Ensure video stays within card boundaries */
+  }
+  
+  mat-card-content {
+    position: relative;
+    height: 100%; /* Allow content to occupy full height of the card */
+  }
+   
+    /* #video-container {
+    position: relative;
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+  }
+*/
+  
+   video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  } 
+   
+  /* video.active {
+    display: block;
+  }
+    */
